@@ -1,0 +1,18 @@
+package itacademy.S05.BLACKJACK.model.DTO;
+
+import itacademy.S05.BLACKJACK.model.enums.PlayerStatus;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class PlayerPlayingDTO {
+    private int id;
+    private String name;
+    private int totalPoints;
+    private PlayerStatus status;
+}
