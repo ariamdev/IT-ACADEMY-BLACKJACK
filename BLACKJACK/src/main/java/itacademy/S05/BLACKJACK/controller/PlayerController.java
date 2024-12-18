@@ -21,11 +21,6 @@ public class PlayerController {
 
     private PlayerService playerService;
 
-    @Autowired
-    public PlayerController(PlayerService playerService) {
-        this.playerService = playerService;
-    }
-
     @Operation(summary = "Ranking", description = "Ranking by player scores.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200",
