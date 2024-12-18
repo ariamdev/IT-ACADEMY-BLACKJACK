@@ -10,14 +10,10 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @Service
+@RequiredArgsConstructor
 public class PlayerServiceImpl implements PlayerService {
 
     private PlayerRepository playerRepository;
-
-    @Autowired
-    public PlayerServiceImpl(PlayerRepository playerRepository) {
-        this.playerRepository = playerRepository;
-    }
 
     @Override
     public Mono<Player> createPlayer(String name) {
