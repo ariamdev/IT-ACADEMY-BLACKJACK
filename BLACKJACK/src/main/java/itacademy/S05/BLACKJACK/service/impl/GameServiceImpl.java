@@ -26,19 +26,12 @@ import java.util.List;
 
 
 @Service
+@RequiredArgsConstructor
 public class GameServiceImpl implements GameService {
-
 
     private GameRepository gameRepository;
     private List<Card> deck;
     private PlayerService playerService;
-
-    @Autowired
-    public GameServiceImpl(GameRepository gameRepository, PlayerService playerService) {
-        this.gameRepository = gameRepository;
-        this.deck = deck;
-        this.playerService = playerService;
-    }
 
     @Override
     public Mono<Game> createGame(String name) {
